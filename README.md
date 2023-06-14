@@ -15,7 +15,7 @@ No it's not considered to be zero. The F-statistic has a p-value of 5.35e-11 whi
 Yes this model predicts `mpg` effectively. The R-squared value of 0.7149 is relatively high, indicating that a high degree of variance of `mpg` is explained by the model. The adjusted R-squared, which is a more conservative estimate of goodness-of-fit is still relatively high at 0.6825.
 In your README, create a subheading ## Summary Statistics on Suspension Coils, and write a short summary using screenshots from your total_summary and lot_summary dataframes, and address the following question:
 
-    The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
 
 ## Summary Statistics on Suspension Coils
 
