@@ -1,0 +1,43 @@
+library(dplyr)
+
+# Part 1
+
+mecha <- read.csv("MechaCar_mpg.csv")
+
+linreg <- lm(mpg ~ ., data=mecha)
+
+print(summary(linreg))
+
+# Part 2
+
+suspension <- read.csv("Suspension_Coil.csv")
+
+total_summary <- suspension %>% summarize(Mean = mean(PSI),
+                                          Median = median(PSI),
+                                          Variance = var(PSI),
+                                          SD = sd(PSI))
+print(total_summary)
+
+lot_summary <- suspension %>% group_by(Manufacturing_Lot) %>% summarize(Mean = mean(PSI),
+                                        Median = median(PSI),
+                                        Variance = var(PSI), 
+                                        SD = sd(PSI))
+
+print(lot_summary)
+
+# Part 3
+
+print("Overall PSI t-test")
+
+print(t.test(suspension$PSI, mu=1500))
+
+# filter for each lot and t-test separately
+
+print("Lot 1 PSI t-test")
+print(t.test(PSI ~ 1, data = suspension, mu=1500, subset = Manufacturing_Lot == "Lot1"))
+
+print("Lot 2 PSI t-test")
+print(t.test(PSI ~ 1, data = suspension, mu=1500, subset = Manufacturing_Lot == "Lot2"))
+
+print("Lot 3 PSI t-test")
+print(t.test(PSI ~ 1, data = suspension, mu=1500, subset = Manufacturing_Lot == "Lot3"))
