@@ -105,3 +105,4 @@ We would use a t-test for the difference of means, that is, a two-sample t-test.
 
 It would make sense to collect numerical data for each of the metric values. Since all metrics are naturally measured by real number, they are continuous variables, and thus suitable for t-tests. So data could be in the form of measurements (expensive but reliable) or published manufacturer data.
 
+##### Disclaimer I had a tutor helping me along throughout this module
